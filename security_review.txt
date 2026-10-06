@@ -1,0 +1,21 @@
+SECURE CODING REVIEW
+
+1. SQL Injection
+The SQL query is constructed using direct user input.
+Risk: An attacker may manipulate the SQL query.
+Recommendation: Use parameterized SQL queries.
+
+2. Insecure Password Handling
+The password is directly used in the database query.
+Risk: Sensitive authentication information may be handled insecurely.
+Recommendation: Use secure password hashing and proper authentication.
+
+3. Missing Input Validation
+User input is accepted without validation.
+Risk: Malicious or unexpected input may reach the application.
+Recommendation: Validate and sanitize input.
+
+4. Authentication Design
+Authentication is directly tied to a database query.
+Risk: This can make secure authentication difficult to maintain.
+Recommendation: Separate authentication logic and use secure authentication practices.
